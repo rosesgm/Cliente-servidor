@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Iniciar Servidor",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/servidor.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Iniciar Cliente",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cliente.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Ejecutar PROYECTO COMPLETO",
+            "configurations": ["Iniciar Servidor", "Iniciar Cliente"]
+        }
+    ]
+}
