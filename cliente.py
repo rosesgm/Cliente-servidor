@@ -8,7 +8,7 @@ COLOR_BG_MAIN = "#ECF0F1"
 COLOR_BTN_SEND = "#2980B9"
 
 DEFAULT_HOST = "127.0.0.1"
-DEFAULT_PORT = 8000
+DEFAULT_PORT = 6000
 DEFAULT_NAME = "Estudiante"
 
 def enviar():
@@ -47,10 +47,6 @@ def enviar():
                 headers, body = data_raw.split("\r\n\r\n", 1)
             except ValueError:
                 body = data_raw
-
-            # --- LIMPIEZA DEL MENSAJE (NUEVO) ---
-            # El servidor devuelve: "Servidor recibió: '[Estudiante] Hola'"
-            # Queremos mostrar solo: "[Estudiante] Hola" o incluso solo "Hola"
             
             # 1. Quitar el prefijo técnico si existe
             prefix = "Servidor recibió: "
